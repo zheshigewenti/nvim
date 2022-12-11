@@ -259,7 +259,7 @@ noremap tmi :+tabmove<CR>
 " === Markdown Settings
 " ===
 " Snippets
-source ~/.config/nvim/md-snippets.vim
+"source ~/.config/nvim/md-snippets.vim
 " auto spell
 autocmd BufRead,BufNewFile *.md setlocal spell
 
@@ -391,7 +391,7 @@ Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-
 " Error checking, handled by coc
 
 " Auto Complete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/tmux-complete.vim'
 
 " Snippets
