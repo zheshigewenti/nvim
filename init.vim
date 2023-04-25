@@ -85,7 +85,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Set <LEADER> as <SPACE>, ; as :  "设置<LEADER>等于空格,;等于:
 let &t_ut=''  "校准vim配色
 let mapleader=" "
-noremap ; :
 
 " quit & save
 noremap Q :q<CR>
@@ -236,7 +235,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
 
 " Github Copilot
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 " Treesitter  用于代码突出显示
 Plug 'nvim-treesitter/nvim-treesitter'
