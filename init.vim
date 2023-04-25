@@ -461,7 +461,9 @@ let g:coc_global_extensions = [
 	\ 'coc-vetur',
 	\ 'coc-vimlsp',
 	\ 'coc-yaml',
+	\ 'coc-vimtex',
 	\ 'coc-yank']
+
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
@@ -555,7 +557,7 @@ let g:table_mode_cell_text_object_i_map = 'k<Bar>'
 
 
 " ==================== FZF ====================
-noremap <silent>ff :Files/<CR>
+noremap <leader>f :Files/<CR>
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6} }
 
 " ==================== CTRLP (Dependency for omnisharp) ====================
@@ -590,8 +592,8 @@ let g:VM_leader                     = {'default': ',', 'visual': ',', 'buffer': 
 
 
 " ==================== nvim-spectre ====================
-nnoremap <LEADER>f <cmd>lua require('spectre').open()<CR>
-vnoremap <LEADER>f <cmd>lua require('spectre').open_visual()<CR>
+nnoremap <LEADER>rp <cmd>lua require('spectre').open()<CR>
+vnoremap <LEADER>rp <cmd>lua require('spectre').open_visual()<CR>
 
 
 " ==================== Bullets.vim ====================
