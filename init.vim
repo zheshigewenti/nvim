@@ -556,7 +556,7 @@ let g:table_mode_cell_text_object_i_map = 'k<Bar>'
 
 
 " ==================== FZF ====================
-noremap <silent><c-f> :Files/<CR>
+noremap <silent>ff :Files/<CR>
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6} }
 
 " ==================== CTRLP (Dependency for omnisharp) ====================
