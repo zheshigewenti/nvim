@@ -19,9 +19,8 @@ goto `/etc/environment`
 ```bash
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
 SDL_IM_MODULE=fcitx
-GLFW_IM_MODULE=ibus
+XMODIFIERS=@im=fcitx
 ```
 ## license
 MIT
