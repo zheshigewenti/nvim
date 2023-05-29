@@ -28,10 +28,10 @@ endif
 source $HOME/.config/nvim/_machine_specific.vim
 
 " === Settings
-" set confirm  "未保存提示确认
-set clipboard=unnamedplus " 系统剪切板共享
 " set guifont=Microsoft_YaHei_Mono:h11:cANSI
 set guifont=wqy-microhei_Mono
+" set confirm  "未保存提示确认
+set clipboard=unnamedplus " 系统剪切板共享
 set autochdir  "在当前dir下执行命令
 set number     " 行号显示
 set relativenumber " 相对行号显示
@@ -380,7 +380,7 @@ Plug 'nvim-pack/nvim-spectre'  "查找替换
 " Mini Vim-APP
 "Plug 'jceb/vim-orgmode'
 "Plug 'mhinz/vim-startify'
-Plug 'skywind3000/asynctasks.vim'  "异步 编译/运行/测试/部署任务
+Plug 'skywind3000/asynctasks.vim'  "异步运行命令
 Plug 'skywind3000/asyncrun.vim'
 
 " Vim Applications
@@ -562,7 +562,7 @@ let g:table_mode_cell_text_object_i_map = 'k<Bar>'
 
 
 " ==================== FZF ====================
-noremap <leader>f :Files/<CR>
+noremap <A-f> :Files/<CR>
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6} }
 
 " ==================== CTRLP (Dependency for omnisharp) ====================
@@ -766,8 +766,8 @@ let g:rooter_silent_chdir = 1
 
 
 " ==================== AsyncRun ====================
-noremap gp :AsyncRun git push<CR>
-
+noremap make :AsyncRun make<CR>
+noremap gl :AsyncRun -cwd=<$(VIM_ROOT)> git clone 
 
 " ==================== AsyncTasks ====================
 let g:asyncrun_open = 6
