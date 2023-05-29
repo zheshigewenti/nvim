@@ -252,7 +252,6 @@ Plug 'RRethy/vim-illuminate'
 " File navigation  文件搜索导航
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  "fzf主库
 Plug 'junegunn/fzf.vim'  "依赖于fzf
-Plug 'kevinhwang91/rnvimr'  "可在浮动窗口中使用ranger
 Plug 'airblade/vim-rooter'  "当跳转文件时把工作目录设置为当前已打开文件目录
 Plug 'pechorin/any-jump.vim'  "关键词跳转文件
 
@@ -744,28 +743,6 @@ let g:vmt_fence_text = 'TOC'
 let g:vmt_fence_closing_text = '/TOC'
 
 
-" ==================== rnvimr ====================
-let g:rnvimr_ex_enable = 1
-let g:rnvimr_pick_enable = 1
-let g:rnvimr_draw_border = 0
-" let g:rnvimr_bw_enable = 1
-highlight link RnvimrNormal CursorLine
-nnoremap <silent> R :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
-let g:rnvimr_action = {
-            \ '<C-t>': 'NvimEdit tabedit',
-            \ '<C-x>': 'NvimEdit split',
-            \ '<C-v>': 'NvimEdit vsplit',
-            \ 'gw': 'JumpNvimCwd',
-            \ 'yw': 'EmitRangerCwd'
-            \ }
-let g:rnvimr_layout = { 'relative': 'editor',
-            \ 'width': &columns,
-            \ 'height': &lines,
-            \ 'col': 0,
-            \ 'row': 0,
-            \ 'style': 'minimal' }
-let g:rnvimr_presets = [{'width': 1.0, 'height': 1.0}]
-
 
 " ==================== vim-subversive ====================
 nmap s <plug>(SubversiveSubstitute)
@@ -882,7 +859,7 @@ require("colorizer").setup {
 	user_default_options = {
 		RGB = true, -- #RGB hex codes
 		RRGGBB = true, -- #RRGGBB hex codes
-		names = true, -- "Name" codes like Blue or blue
+		names = false, -- "Name" codes like Blue or blue
 		RRGGBBAA = false, -- #RRGGBBAA hex codes
 		AARRGGBB = true, -- 0xAARRGGBB hex codes
 		rgb_fn = false, -- CSS rgb() and rgba() functions
