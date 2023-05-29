@@ -30,6 +30,8 @@ source $HOME/.config/nvim/_machine_specific.vim
 " === Settings
 " set confirm  "未保存提示确认
 set clipboard=unnamedplus " 系统剪切板共享
+" set guifont=Microsoft_YaHei_Mono:h11:cANSI
+set guifont=wqy-microhei_Mono
 set autochdir  "在当前dir下执行命令
 set number     " 行号显示
 set relativenumber " 相对行号显示
