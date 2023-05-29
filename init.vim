@@ -252,6 +252,7 @@ Plug 'RRethy/vim-illuminate'
 " File navigation  文件搜索导航
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  "fzf主库
 Plug 'junegunn/fzf.vim'  "依赖于fzf
+Plug 'theniceboy/joshuto.nvim'  "可在浮动窗口中使用joshuto
 Plug 'airblade/vim-rooter'  "当跳转文件时把工作目录设置为当前已打开文件目录
 Plug 'pechorin/any-jump.vim'  "关键词跳转文件
 
@@ -538,6 +539,9 @@ let g:coc_snippet_prev = '<c-h>'
 imap <C-e> <Plug>(coc-snippets-expand-jump)
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 
+
+" ==================== joshuto.nvim ====================
+noremap <A-j> :Joshuto<CR>
 
 " ==================== vim-instant-markdown ====================
 let g:instant_markdown_slow = 0
@@ -833,7 +837,7 @@ noremap <silent> - <Cmd>execute('normal! ' . v:count1 . 'N')<CR>
 
 
 " ==================== lazygit.nvim ====================
-noremap <c-g> :LazyGit<CR>
+noremap <A-g> :LazyGit<CR>
 let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 1.0 " scaling factor for floating window
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
