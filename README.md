@@ -17,10 +17,10 @@ pip install debugpy
 ## fcitx5
 goto `/etc/environment` 
 ```bash
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-SDL_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+SDL_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
 ```
 ## license
 MIT
